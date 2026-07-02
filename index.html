@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Management System</title>
+</head>
+<style>
+  
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .login-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-top: 10px;
+    }
+
+    input, select {
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+</style>
+<body>
+    <div class="login-container">
+
+    <h1>Asset Management System</h1>
+    <p>LOGIN</p>
+
+    <form id="loginform"> 
+
+    <label for="username">Username</label>
+    <input type="text" id="Username" placeholder="Enter Username">
+
+    <label for ="Password">Password</label>
+    <input type="Password" id="password" placeholder="Enter Password">
+
+    <label for="role">Role</label>
+    <select id="role" placeholder="Enter Role">
+        <option value=""></option>
+        <option value="user">User</option>
+        <option value="ict">ICT</option>
+        <option value="admin">Admin</option>
+    </select>
+
+    <button type="submit">Login</button>
+</form>
+</div>
+<script src="login.js"></script>
+<script>
+    document.getElementById("loginform").addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const role = document.getElementById("role").value;
+
+    if(role === "user"){
+        window.location.href = "user/dashboard.html";
+    }
+    else if(role === "ict"){
+        window.location.href = "ict/dashboard.html";
+    }
+    else if(role === "admin"){
+        window.location.href = "admin/dashboard.html";
+    }
+    else{
+        alert("Please select a role.");
+    }
+
+});
+</script>
+
+
+</body>
+</html>

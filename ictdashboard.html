@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Officer Dashboard</title>
+</head>
+<style>
+    
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+/* Header */
+header{
+    background:#003366;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:28px;
+}
+
+.logout{
+    text-decoration:none;
+    color:white;
+    background:#d9534f;
+    padding:10px 20px;
+    border-radius:5px;
+}
+
+
+/* Main Content */
+.container{
+    width:90%;
+    margin:30px auto;
+}
+
+.welcome{
+    font-size:26px;
+    color:#003366;
+    margin-bottom:25px;
+}
+
+/* Dashboard Cards */
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+/*box*/
+.card{
+    background:rgb(253, 251, 251);
+    border-radius:10px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-15px);
+}
+/*the roles*/
+.card h2{
+    color:#0a0707;
+    margin-bottom:10px;
+    font-size:20px;
+}
+/*open button*/
+.card a{
+    display:inline-block;
+    text-decoration:none;
+    background:#007BFF;
+    color:white;
+    padding:10px 20px;
+    border-radius:5px;
+}
+
+.card a:hover{
+    background:#004bb3;
+}
+
+
+</style>
+<body>
+
+<header>
+    <h1>ASSET MANAGEMENT SYSTEM</h1>
+
+    <a href="../index.html" class="logout">Logout</a>
+</header>
+
+<div class="container">
+
+<div class="welcome">
+    Welcome, ICT Officer 👋
+</div>
+
+<div class="dashboard">
+
+    <div class="card">
+        <h2>Register Asset</h2>
+        <a href="register_asset.html">open</a>
+    </div>
+
+    <div class="card">
+        <h2>Issue Asset</h2>
+        <a href="issue_asset.html">Open</a>
+    </div>
+
+    <div class="card">
+        <h2>Reissue Asset</h2>
+        <a href="reissue_asset.html">Open</a>
+    </div>
+
+    <div class="card">
+        <h2>Retrieve Asset</h2>
+        <a href="retrieve_asset.html">Open</a>
+    </div>
+
+    <div class="card">
+        <h2>View Assets</h2>
+        <a href="view_assets.html">Open</a>
+    </div>
+
+    <div class="card">
+        <h2>Asset History</h2>
+        <a href="asset_history.html">Open</a>
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
